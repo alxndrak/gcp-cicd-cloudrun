@@ -3,10 +3,9 @@
 # Copyleft (c) by Denis Astahov
 #---------------------------------------------------------------------------
 
-FROM ubuntu:21.04
+FROM ubuntu:latest
 
-RUN apt-get -y update
-RUN apt-get -y install apache2
+RUN apt-get update && apt-get install -y apache2
 
 RUN echo 'Docker Image on CloudRun of alxndrak!<br>'   > /var/www/html/index.html
 RUN echo '<b><font color="magenta">Version 1.1</font></b>' >> /var/www/html/index.html
